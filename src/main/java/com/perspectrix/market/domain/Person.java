@@ -1,12 +1,11 @@
 package com.perspectrix.market.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.geo.GeoJsonPoint;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
-import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -16,8 +15,7 @@ import java.util.HexFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-@Getter
-@Setter
+@Data
 @Document(collection = "people")
 public class Person {
     @Id
